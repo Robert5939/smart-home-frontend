@@ -79,10 +79,10 @@ export default function Dashboard() {
         </div>
       </header>
 
-      {/* 01 · OVERVIEW */}
+      {/* 01 · OVERVIEW — shows TODAY's values */}
       <section className="section">
-        <SectionHeader title="01 · System Overview" />
-        <OverviewCards latest={latest} />
+        <SectionHeader title="01 · Today's Overview" />
+        <OverviewCards latest={latest} dailyStats={dailyStats} />
       </section>
 
       {/* 02 · DEVICE STATUS */}
@@ -91,21 +91,21 @@ export default function Dashboard() {
         <StatusCards latest={latest} />
       </section>
 
-      {/* 03 · TODAY HOURLY — shows spikes and device activity */}
+      {/* 03 · TODAY HOURLY */}
       <section className="section">
         <SectionHeader title="03 · Today's Hourly Activity" />
         <TodayChart todayHourly={todayHourly} />
       </section>
 
-      {/* 04 · 30-DAY ENERGY — daily bars with trend line */}
+      {/* 04 · 30-DAY ENERGY */}
       <section className="section">
-        <SectionHeader title="04 · Daily Energy Consumption — 30 Days" />
+        <SectionHeader title="04 · Daily Energy Consumption — 60 Days" />
         <EnergyChart dailyStats={dailyStats} />
       </section>
 
       {/* 05 · 30-DAY COST */}
       <section className="section">
-        <SectionHeader title="05 · Daily Cost History — 30 Days" />
+        <SectionHeader title="05 · Daily Cost History — 60 Days" />
         <CostChart dailyStats={dailyStats} />
       </section>
 
